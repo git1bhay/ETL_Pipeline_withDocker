@@ -18,7 +18,7 @@ def generate_record(instrument_id: str) -> dict:
 
 @app.get("/v1/market-data")
 def get_market_data(response: Response):
-    # 5% chance of fault injection
+    
     fault_roll = random.random()
 
     if fault_roll < 0.025:
